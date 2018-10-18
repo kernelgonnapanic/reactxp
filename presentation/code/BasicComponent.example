@@ -1,0 +1,28 @@
+import * as RX from "reactxp";
+
+const styles = {
+  buttonStyles: RX.Styles.createButtonStyle({
+    padding: 5,
+    backgroundColor: "#123456",
+    borderRadius: 2,
+    alignSelf: "flex-start"
+  })
+};
+
+export const Button = ({ onPress }) => {
+  return (
+    <RX.View>
+      <RX.Button
+        style={styles.buttonStyles}
+        onPress={onPress}
+      >
+        {
+          RX.Platform.getType() === 'web'
+            ? <RX.Text> web </RX.Text>
+            : <RX.Text> mobile </RX.Text>
+        }
+        <RX.Text>{text}</RX.Text>
+      </RX.Button>
+    </RX.View>
+  );
+};

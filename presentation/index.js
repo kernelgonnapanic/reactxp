@@ -1,5 +1,12 @@
 // Import React
 import React from "react";
+import SlideTitle from "./slideTitle";
+import SlideMe from "./slideMe";
+import NewSectionSlide from "./newSectionSlide";
+import IdyllaSlide from "./idyllaSlide";
+import ClientRequestsSlide from "./clientRequestsSlide";
+import LeakyAbstractionSlide from "./leakyAbstractionSlide";
+import ShouldIBotherSlide from "./shouldIBotherSlide";
 
 // Import Spectacle Core tags
 import {
@@ -11,61 +18,76 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Image,
+  Appear
 } from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import SummarySlide from "./summarySlide";
+import AbstractionsEverywhereSlide from "./abstractionsEverywhereSlide";
+import UseIfsEverywhereSlide from "./useIfsEverywhereSlide";
+
+import BasicCodeSlide from "./basicCodeSlide";
+import CssSlide from "./cssSlide";
+import DoubleComponentNativeSlide from "./doubleComponentNativeSlide";
+import DoubleComponentWebSlide from "./doubleComponentWebSlide";
+import HaveNoIdeaSlide from "./haveNoIdeaSlide";
+import DebugEveryWhereSlide from "./debugEveryWhereSlide";
+import ReactxpSlide from "./reactxpSlide";
+import BuildToolSlides from "./buildToolSlides";
+import NavigationSlides from "./navigationSlides";
+import YouHadOneProblemSlide from "./youHadOneProblemSlide";
+import NavigationQuestionsSlide from "./navigationQuestionsSlide";
+import ReactRouterNavigationSlide from "./reactRouterNavigationSlide";
+import BlogSlide from "./blogSlide";
 
 // Require CSS
 require("normalize.css");
 
-const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quaternary: "#CECECE"
-}, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
-});
+const theme = createTheme(
+  {
+    primary: "#71B551",
+    secondary: "white",
+    tertiary: "#82472D",
+    quaternary: "#3A6824",
+    monte: "#EC1115"
+  },
+  {
+    primary: "Montserrat",
+    secondary: "Helvetica"
+  }
+);
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
-        </Slide>
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
+        <SlideTitle />
+        <SlideMe />
+        <NewSectionSlide text="A problem" />
+        <IdyllaSlide />
+        {ClientRequestsSlide()}
+        <NewSectionSlide text="Tools" />
+        {ReactxpSlide()}
+        {BasicCodeSlide()}
+        {DoubleComponentNativeSlide()}
+        {DoubleComponentWebSlide()}
+        {CssSlide()}
+        {BuildToolSlides()}
+        {NavigationSlides()}
+        {NavigationQuestionsSlide()}
+        {ReactRouterNavigationSlide()}
+        {BlogSlide()}
+        {YouHadOneProblemSlide()}
+        {HaveNoIdeaSlide()}
+        {UseIfsEverywhereSlide()}
+        {DebugEveryWhereSlide()}
+        <AbstractionsEverywhereSlide />
+        <LeakyAbstractionSlide />
+        {ShouldIBotherSlide()}
+        {SummarySlide()}
+        <SlideMe />
       </Deck>
     );
   }
