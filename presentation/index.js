@@ -67,7 +67,9 @@ export default class Presentation extends React.Component {
       <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
         <SlideTitle />
         <SlideMe />
-        <NewSectionSlide text="A problem" />
+        {
+          //<NewSectionSlide text="A problem" />
+        }
         <IdyllaSlide />
         {ClientRequestsSlide()}
         <NewSectionSlide text="Tools" />

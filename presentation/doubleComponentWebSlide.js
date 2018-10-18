@@ -12,8 +12,8 @@ export default () => (
     color="secondary"
     ranges={[
       { loc: [2, 3], title: "ImagePicker - web" },
-      { loc: [21, 29], title: "Picker implmentation - web" },
-      { loc: [8, 13], title: "Open picker - web" }
+      { loc: [20, 28], title: "Picker implementation - web" },
+      { loc: [7, 12], title: "Open picker - web" }
     ]}
   />
 );

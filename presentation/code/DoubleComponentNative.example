@@ -1,7 +1,7 @@
 import { PureComponent } from "react";
 import Picker from "react-native-image-crop-picker";
 
-class PhotoPicker extends PureComponent {
+class ImagePicker extends PureComponent {
   constructor(props) {
     super(props);
   }
@@ -14,4 +14,4 @@ class PhotoPicker extends PureComponent {
   }
 }
 
-export default PhotoPicker;
+export default ImagePicker;

@@ -1,7 +1,6 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 
-class PhotoPicker extends Component {
-  private fileInput: HTMLInputElement | null;
+class ImagePicker extends PureComponent {
   constructor(props) {
     super(props);
     this.fileInput = null;
@@ -18,7 +17,7 @@ class PhotoPicker extends Component {
       this.props.onImageChosen(this.fileInput.files);
     }
   }
-  
+
   render() {
     return (
       <input
@@ -30,4 +29,4 @@ class PhotoPicker extends Component {
   }
 }
 
-export default PhotoPicker;
+export default ImagePicker;
