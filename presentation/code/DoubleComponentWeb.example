@@ -1,0 +1,33 @@
+import { Component } from 'react';
+
+class PhotoPicker extends Component {
+  private fileInput: HTMLInputElement | null;
+  constructor(props) {
+    super(props);
+    this.fileInput = null;
+  }
+  openPicker = () => {
+    if (this.fileInput) {
+      this.fileInput.click();
+    }
+  }
+  handlePhotoChange = async () => {
+    if (this.fileInput
+      && this.fileInput.files
+    ) {
+      this.props.onImageChosen(this.fileInput.files);
+    }
+  }
+  
+  render() {
+    return (
+      <input
+        type="file"
+        ref={input => this.fileInput = input}
+        onChange={this.handlePhotoChange}
+      />
+    );
+  }
+}
+
+export default PhotoPicker;

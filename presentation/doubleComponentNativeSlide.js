@@ -11,9 +11,9 @@ export default () => (
     bgColor="tertiary"
     color="secondary"
     ranges={[
-      { loc: [4, 5], title: "ImagePicker - native" },
-      { loc: [8, 12], title: "Open picker - native" },
-      { loc: [1, 3], title: "External libs" }
+      { loc: [3, 4], title: "ImagePicker - native" },
+      { loc: [7, 11], title: "Open picker - native" },
+      { loc: [1, 2], title: "External libs" }
     ]}
   />
 );

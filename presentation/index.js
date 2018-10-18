@@ -41,6 +41,8 @@ import YouHadOneProblemSlide from "./youHadOneProblemSlide";
 import NavigationQuestionsSlide from "./navigationQuestionsSlide";
 import ReactRouterNavigationSlide from "./reactRouterNavigationSlide";
 import BlogSlide from "./blogSlide";
+import WebpackHaulSlide from "./webpackHaulSlide";
+import AliasesSlide from "./aliasesSlide";
 
 // Require CSS
 require("normalize.css");
@@ -75,6 +77,8 @@ export default class Presentation extends React.Component {
         {DoubleComponentWebSlide()}
         {CssSlide()}
         {BuildToolSlides()}
+        {WebpackHaulSlide()}
+        {AliasesSlide()}
         {NavigationSlides()}
         {NavigationQuestionsSlide()}
         {ReactRouterNavigationSlide()}
